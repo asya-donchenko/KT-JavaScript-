@@ -2,7 +2,7 @@
 // «четное двузначное число», «нечетное трехзначное число» и т. д
 
 function numberDescription(number) {
-    var description = '';
+    let description = '';
  
     if (number % 2 === 0) {
        description += 'четное '; //Функция принимает целое число и возвращает строку описание
@@ -21,11 +21,11 @@ function numberDescription(number) {
     return description;
  }
  
- var number = prompt('Введите целое число в диапазоне от 1 до 999:'); //запрос числа у пользователя
- var parsedNumber = parseInt(number);
+ let number = prompt('Введите целое число в диапазоне от 1 до 999:'); //запрос числа у пользователя
+ let parsedNumber = parseInt(number);
  
  if (!isNaN(parsedNumber) && parsedNumber >= 1 && parsedNumber <= 999) {
-    var result = numberDescription(parsedNumber);
+    let result = numberDescription(parsedNumber);
     console.log(result);
  } else {
     console.log('Введите целое число в диапазоне от 1 до 999.');
