@@ -1,0 +1,43 @@
+<!-- Задание 1. -->
+<!-- Составьте документ HTML с формой aform. В ней должно быть два текстовых поля, одно 
+для геометрической фигуры, другое для цвета, и кнопка. Напишите функцию с переменной, 
+которая содержит слова «Мне нравится ». Когда пользователь нажмет на кнопку, должно 
+всплывать окно со следующей надписью: 
+1. Мне нравится геометрическая фигура такого-то цвета. (по результатам тех 
+данных, которые пользователь вводит в форму)
+2. Покажите длину (length) «фигуры».
+ -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ЗАДАНИЕ 1 КТ3</title>
+   <script>
+      function showResult() {
+         var shape = document.getElementById('shapeField').value;
+         var color = document.getElementById('colorField').value;
+         var message = 'Мне нравится ' + shape + ' такого-то цвета:' + color; // -- 1. сообщение
+
+         alert(message);
+         showLength(shape);
+      }
+
+      function showLength(shape) {
+         var length = shape.length;
+         alert('Длина "фигуры"' + shape + ': ' + length); // -- 2. сообщение
+      }
+   </script>
+</head>
+<body>
+   <form id="aform">
+      <label for="shapeField">Геометрическая фигура:</label>
+      <input type="text" id="shapeField" name="shapeField" required><br>
+
+      <label for="colorField">Цвет:</label>
+      <input type="text" id="colorField" name="colorField" required><br>
+
+      <button type="button" onclick="showResult()">Показать результат</button>
+   </form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!-- Задание 2.
+Создать форму, которая будет взаимодействовать с пользователем. Форма должна иметь 
+три элемента: 
+- поле ввода с просьбой ввести имя; 
+- два поля для флажков с вопросом о том, что больше нравится пользователю, 
+мороженое или шоколад; 
+- кнопку отправки данных. 
+С каждым элементом должно произойти следующее: 
+- При вводе имени должно появиться окно предупреждения: «Внимательно вводите 
+свое имя». 
+- Два поля с флажками должны выдавать окно со словами: «Вы выбрали...» и выбор 
+пользователя. 
+- При нажатии на кнопку должно появиться окно предупреждения, благодарящее 
+пользователя за участие в опросе -->
+
+<!DOCTYPE html>
+<html>
+<head>
+   <title>ЗАДАНИЕ 2 КТ3</title>
+   <script>
+      function validateName() {
+         var name = document.getElementById('nameField').value;
+         if (name === '') {
+            alert('Внимательно введите свое имя');
+         }
+      }
+
+      function showChoice() {
+         var iceCreamChecked = document.getElementById('iceCreamCheckbox').checked;
+         var chocolateChecked = document.getElementById('chocolateCheckbox').checked;
+         var message = 'Вы выбрали: ';
+
+         if (iceCreamChecked && chocolateChecked) {
+            message += 'мороженое и шоколад';
+         } else if (iceCreamChecked) {
+            message += 'мороженое';
+         } else if (chocolateChecked) {
+            message += 'шоколад';
+         } else {
+            message += 'ничего';
+         }
+
+         alert(message);
+      }
+
+      function showThanks() {
+         alert('Спасибо за участие в опросе!');
+      }
+   </script>
+</head>
+<body>
+   <form>
+      <label for="nameField">Введите ваше имя:</label>
+      <input type="text" id="nameField" name="nameField" required><br>
+
+      <label for="iceCreamCheckbox">Мороженое:</label>
+      <input type="checkbox" id="iceCreamCheckbox" name="iceCreamCheckbox"><br>
+
+      <label for="chocolateCheckbox">Шоколад:</label>
+      <input type="checkbox" id="chocolateCheckbox" name="chocolateCheckbox"><br>
+
+      <button type="button" onclick="validateName(); showChoice(); showThanks()">Отправить</button>
+   </form>
+</body>
+</html>
