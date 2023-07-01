@@ -10,11 +10,11 @@ function calculateY(x) {
     }
   }
   
-  var x1 = 0;
-  var x2 = -2;
+  let x1 = 0;
+  let x2 = -2;
   
-  var y1 = calculateY(x1);
-  var y2 = calculateY(x2);
+  let y1 = calculateY(x1);
+  let y2 = calculateY(x2);
   
   console.log('Значение y при x = ' + x1 + ':', y1);
   console.log('Значение y при x = ' + x2 + ':', y2);
