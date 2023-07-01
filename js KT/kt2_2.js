@@ -8,13 +8,13 @@ function calculateY(x) {
     }
   }
   
-  var x1 = -4;
-  var x2 = -2;
-  var x3 = 2;
+  let x1 = -4;
+  let x2 = -2;
+  let x3 = 2;
   
-  var y1 = calculateY(x1);
-  var y2 = calculateY(x2);
-  var y3 = calculateY(x3);
+  let y1 = calculateY(x1);
+  let y2 = calculateY(x2);
+  let y3 = calculateY(x3);
   
   console.log('Значение y при x = ' + x1 + ':', y1);
   console.log('Значение y при x = ' + x2 + ':', y2);
