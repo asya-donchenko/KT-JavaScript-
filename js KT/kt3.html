@@ -15,16 +15,16 @@
    <title>ЗАДАНИЕ 1 КТ3</title>
    <script>
       function showResult() {
-         var shape = document.getElementById('shapeField').value;
-         var color = document.getElementById('colorField').value;
-         var message = 'Мне нравится ' + shape + ' такого-то цвета:' + color; // -- 1. сообщение
+         let shape = document.getElementById('shapeField').value;
+         let color = document.getElementById('colorField').value;
+         let message = 'Мне нравится ' + shape + ' такого-то цвета:' + color; // -- 1. сообщение
 
          alert(message);
          showLength(shape);
       }
 
       function showLength(shape) {
-         var length = shape.length;
+         let length = shape.length;
          alert('Длина "фигуры"' + shape + ': ' + length); // -- 2. сообщение
       }
    </script>
