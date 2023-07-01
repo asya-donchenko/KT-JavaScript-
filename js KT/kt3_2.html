@@ -19,16 +19,16 @@
    <title>ЗАДАНИЕ 2 КТ3</title>
    <script>
       function validateName() {
-         var name = document.getElementById('nameField').value;
+         let name = document.getElementById('nameField').value;
          if (name === '') {
             alert('Внимательно введите свое имя');
          }
       }
 
       function showChoice() {
-         var iceCreamChecked = document.getElementById('iceCreamCheckbox').checked;
-         var chocolateChecked = document.getElementById('chocolateCheckbox').checked;
-         var message = 'Вы выбрали: ';
+         let iceCreamChecked = document.getElementById('iceCreamCheckbox').checked;
+         let chocolateChecked = document.getElementById('chocolateCheckbox').checked;
+         let message = 'Вы выбрали: ';
 
          if (iceCreamChecked && chocolateChecked) {
             message += 'мороженое и шоколад';
